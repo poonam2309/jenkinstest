@@ -9,7 +9,7 @@ pipeline {
         steps {
             script {
                 openshift.withCluster() {
-                    openshift.withProject() {
+                    openshift.withProject('jenkins') {
                         echo "Using project: ${openshift.project()}"
                     }
                 }
