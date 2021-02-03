@@ -4,9 +4,6 @@ pipeline {
       label 'maven' 
     }
   }
-  options {
-    timeout(time: 20, unit: 'MINUTES') 
-  }
   stages {
     stage('preamble') {
         steps {
