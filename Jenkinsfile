@@ -1,6 +1,7 @@
 pipeline {
-  agent { dockerfile true }
+  agent { dockerfile true 
   label 'maven'
+        }
   }
   stages {
     stage('test') {
