@@ -8,6 +8,7 @@ pipeline {
              dockerfile{
                dir 'jenkinstest/Dockerfile'
              }
+            }
               script {
                      echo "Tesing Pipeline"
                     }
