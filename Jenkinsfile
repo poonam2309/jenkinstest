@@ -16,9 +16,12 @@ pipeline {
             }
         }
     }
-    stage('test') {
+    stage('Build') {
       steps {
-        script { echo "Hello Poonam" }
+        script { 
+          echo "Hello Poonam"
+          sh 'mvn clean package'
+        }
       }
     }
     }
