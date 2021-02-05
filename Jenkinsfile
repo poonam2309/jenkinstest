@@ -1,15 +1,14 @@
 pipeline {
-  agent none
+  agent { 
+    node {
+          dockerfile true 
+    }
   }
+}
   stages {
     stage('test') {
           steps {
-            agent {
-             dockerfile{
-               dir 'jenkinstest/Dockerfile'
-             }
-            }
-              script {
+                 script {
                      echo "Tesing Pipeline"
                     }
                 }
