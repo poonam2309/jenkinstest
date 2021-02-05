@@ -11,10 +11,8 @@ pipeline {
                       echo "Tesing Pipeline"
                     }
                 }
-            }
-        }
-    
-    stage('Build') {
+             }
+   stage('Build') {
       steps {
         script { 
           echo "Hello Poonam"
