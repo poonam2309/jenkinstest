@@ -20,7 +20,8 @@ pipeline {
       steps {
         script { 
           echo "Hello Poonam"\
-          sh 'sh build.sh'
+          sh 'docker build -t helloworld:latest /tmp/workspace/dockerbuild/'
+          
         }
       }
     }
