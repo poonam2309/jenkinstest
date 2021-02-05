@@ -19,7 +19,8 @@ pipeline {
    stage('Build') {
       steps {
         script { 
-          echo "Hello Poonam"
+          echo "Hello Poonam"\
+          sh 'sh build.sh'
         }
       }
     }
