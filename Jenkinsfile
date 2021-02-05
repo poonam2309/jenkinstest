@@ -9,7 +9,7 @@ pipeline {
         steps {
             script {
                       echo "Tesing Pipeline"
-                      sh 'mvn clean package'
+                      sh 'mvn --version'
                     }
                 }
              }
