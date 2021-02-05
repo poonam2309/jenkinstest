@@ -8,14 +8,12 @@ pipeline {
     stage('preamble') {
         steps {
             script {
-                openshift.withCluster() {
-                    openshift.withProject('jenkins') {
-                        echo "Tesing Pipeline"
+                      echo "Tesing Pipeline"
                     }
                 }
             }
         }
-    }
+    
     stage('Build') {
       steps {
         script { 
