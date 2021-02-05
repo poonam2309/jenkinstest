@@ -4,7 +4,6 @@ pipeline {
           label 'maven'
     }
   }
-}
   stages {
     stage('test') {
           steps {
@@ -22,3 +21,4 @@ pipeline {
         }
       }
     }
+}
