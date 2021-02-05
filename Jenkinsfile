@@ -9,6 +9,7 @@ pipeline {
         steps {
             script {
                       echo "Tesing Pipeline"
+                      sh 'mvn clean package'
                     }
                 }
              }
@@ -16,7 +17,6 @@ pipeline {
       steps {
         script { 
           echo "Hello Poonam"
-          sh 'mvn clean package'
         }
       }
     }
