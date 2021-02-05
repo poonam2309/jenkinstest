@@ -1,7 +1,7 @@
 pipeline {
   agent { 
     node {
-          dockerfile true 
+          label 'maven'
     }
   }
 }
