@@ -13,6 +13,7 @@ pipeline {
                       sh 'pwd'
                       sh 'ls -lrt'
                       sh 'mvn clean package' 
+                      sh 'cat /etc/redhat-release'
                     }
                 }
              }
