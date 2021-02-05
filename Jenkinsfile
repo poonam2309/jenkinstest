@@ -19,7 +19,7 @@ pipeline {
    stage('Build') {
       steps {
         script { 
-          echo "Hello Poonam"\
+          echo "Hello Poonam"
           sh 'docker build -t helloworld:latest /tmp/workspace/dockerbuild/'
           
         }
