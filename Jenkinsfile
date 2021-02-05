@@ -1,24 +1,28 @@
 pipeline {
-  agent { 
+  agent {
     node {
-          label 'maven'
+      label 'maven' 
     }
   }
-   stages {
+  stages {
     stage('preamble') {
         steps {
-                 script {
-                     echo "Tesing Pipeline"
+            script {
+                openshift.withCluster() {
+                    openshift.withProject('jenkins') {
+                        echo "Tesing Pipeline"
                     }
                 }
             }
         }
+    }
     stage('Build') {
       steps {
         script { 
           echo "Hello Poonam"
-          sh 'java --version'
+          sh 'mvn clean package'
         }
       }
+    }
     }
 }
