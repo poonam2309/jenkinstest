@@ -1,0 +1,4 @@
+[[rules]]
+    description = "password"
+    regex = '''(password: [A-Za-z])'''
+    tags = ["key", "Openshift"]

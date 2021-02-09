@@ -1,0 +1,34 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  creationTimestamp: null
+  name: loadtest
+objects:
+- apiVersion: build.openshift.io/v1
+  kind: BuildConfig
+  metadata:
+    creationTimestamp: null
+    name: perftest-pipeline
+  spec:
+    failedBuildsHistoryLimit: 5
+    nodeSelector: {}
+    output: {}
+    postCommit: {}
+    resources: {}
+    runPolicy: Serial
+    source:
+      contextDir: jenkins
+      git:
+        ref: master
+        uri: https://github.ibm.com/experiential-squads/ref-impl-loadtest.git
+      sourceSecret:
+        name: ref-impl-2-1-estore
+      type: Git
+    strategy:
+      jenkinsPipelineStrategy:
+        jenkinsfilePath: pipelines/Jenkinsfile
+      type: JenkinsPipeline
+    successfulBuildsHistoryLimit: 5
+    triggers: []
+  status:
+    lastVersion: 0
